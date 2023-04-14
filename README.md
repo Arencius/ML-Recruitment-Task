@@ -36,4 +36,4 @@ The directory contents:
 
 ### Usage:
 In order to start the server, run this command in your terminal:
-```uvicorn main:app --reload```. Open your web browser and navigate to http://localhost:8000/docs to view the endpoint.
+```uvicorn main:app --reload```. Open your web browser and navigate to http://localhost:8000/docs to view the endpoint. There you will be asked for model name to get a prediction (one of: heuristic, decision_tree, random_forest, neural_network)
