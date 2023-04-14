@@ -30,11 +30,10 @@ def model_prediction(model_name: str):
     input_data = input_data.drop('output', axis=1).to_numpy()
 
     model = models.get(model_name)
+    prediction = model.predict(input_data)
 
-    if model_name == 'heuristic':
-        prediction = model.predict(input_data)
-    else:
-        prediction = np.argmax(model.predict(input_data)) + 1
+    if not model_name == 'heuristic':
+        prediction = np.argmax(prediction) + 1
 
     output = {
         'Input data': input_data.tolist(),
